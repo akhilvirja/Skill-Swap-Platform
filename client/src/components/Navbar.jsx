@@ -18,12 +18,14 @@ const Navbar = ({ isLoggedIn, userProfilePic }) => {
           <>
             <Link to="/home" className="nav-link">Home</Link>
             <Link to="/swap-requests" className="nav-link">Swap Requests</Link>
+            <Link to="/profile" className="nav-link">
             <img
               src={userProfilePic}
               alt="profile"
               className="profile-pic"
               title="Profile"
-            />
+              />
+              </Link>
           </>
         )}
       </div>

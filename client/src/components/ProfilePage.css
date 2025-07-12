@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #3f51b5;
+    --secondary-color: #f50057;
+    --background: #f4f6fa;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --border-color: #ddd;
+  }
+  
+  body {
+    background: var(--background);
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text-color);
+  }
+  
+  .profile-container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-actions,
+  .profile-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .btn.save {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .btn.discard {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .btn.small {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  .link-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .profile-body {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .profile-left,
+  .profile-right {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    margin-top: 0.4rem;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .tag {
+    background: #e3f2fd;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+  }
+  
+  .remove {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .photo-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 2px solid var(--primary-color);
+  }
