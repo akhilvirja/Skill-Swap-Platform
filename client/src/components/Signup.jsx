@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +11,7 @@ const Signup = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,6 +22,28 @@ const Signup = () => {
     setLoading(true);
     setError('');
 
+
+    try {
+      const response = await axios.post("http://localhost:8000/api/auth/register", {
+        name: formData.username,
+        email: formData.email,
+        password: formData.password
+      });
+
+      if (response.status === 201) {
+        useNavigate('/login')
+      } else {
+        setError("Registration failed. Please try again.");
+      }
+    } catch (err) {
+    if (err.message) {
+      setError(err.message);
+    } else {
+      setError("An unexpected error occurred.");
+    }
+  } finally {
+    setLoading(false);
+  }
    
   };
 

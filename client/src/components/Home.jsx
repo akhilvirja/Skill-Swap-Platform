@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.css';
@@ -13,18 +14,24 @@ const HomePage = () => {
     const [loggedIn, setLoggedIn] = useState(true); // Set this based on real auth
 
     useEffect(() => {
-        const fetchUsers = async () => {
-            const res = await axios.get(`http://localhost:5000/api/users`, {
-                params: { skill, availability, page: currentPage },
-            });
-            setUsers(res.data.users); // Make sure your backend filters private profiles
-        };
-        fetchUsers();
-    }, [skill, availability, currentPage]);
+    const fetchUsers = async () => {
+        try {
+            const res = await axios.get(`http://localhost:8000/api/users/public`);
+            console.log(res);
+            if (res.data && Array.isArray(res.data)) {
+                setUsers(res.data);
+            } else {
+                setUsers([]); // fallback to empty array
+            }
+        } catch (error) {
+            console.error("Failed to fetch users:", error);
+            setUsers([]); // also fallback on error
+        }
+    };
+    fetchUsers();
+}, [skill, availability,currentPage]);
 
-    const usersPerPage = 4;
-
-    const filteredUsers = sampleUsers.filter(user => {
+    const filteredUsers = users.filter(user => {
         const matchesSkill =
             skill === '' ||
             user.skillsOffered.some(s => s.toLowerCase().includes(skill.toLowerCase())) ||
@@ -37,6 +44,7 @@ const HomePage = () => {
         return matchesSkill && matchesAvailability;
     });
 
+    const usersPerPage = 4;
     const totalPages = Math.ceil(filteredUsers.length / usersPerPage);
     const startIndex = (currentPage - 1) * usersPerPage;
     const paginatedUsers = filteredUsers.slice(startIndex, startIndex + usersPerPage);
@@ -47,8 +55,8 @@ const HomePage = () => {
             <div className="filter-bar">
                 <select onChange={(e) => setAvailability(e.target.value)}>
                     <option value="">Availability</option>
-                    <option value="weekends">Weekends</option>
-                    <option value="evenings">Evenings</option>
+                    <option value="weekend">Weekends</option>
+                    <option value="evening">Evenings</option>
                 </select>
                 <input
                     type="text"
@@ -65,12 +73,12 @@ const HomePage = () => {
             </div>
 
 
-
             <Pagination
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
                 totalPages={totalPages}
             />
+
         </div>
     );
 };
