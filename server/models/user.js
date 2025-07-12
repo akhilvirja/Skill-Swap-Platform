@@ -13,10 +13,10 @@ const userSchema = new mongoose.Schema({
   ratings: [
     {
       raterId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-      rating: Number,
+      rating: { type: Number, min: 1, max: 5 },
       comment: String
     }
   ]
 }, { timestamps: true });
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('User', userSchema);
