@@ -36,7 +36,7 @@ Email: vishvamp129@gmail.com
 
 Name: Virja Akhil
 
-Email: virjaakhil@gmai.com
+Email: virjaakhil@gmail.com
 
 **Team Member 3**:
 
