@@ -1,4 +1,3 @@
-/* ================= Reset & Global ================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,7 +14,6 @@ html, body {
   align-items: center;
 }
 
-/* ================= Login Page Container ================= */
 .login-page {
   width: 100%;
   height: 100vh;
@@ -25,7 +23,6 @@ html, body {
   background-color: #f8f9fb;
 }
 
-/* ================= Login Card ================= */
 .login-card {
   background-color: #ffffff;
   padding: 40px 30px;
@@ -36,7 +33,6 @@ html, body {
   text-align: center;
 }
 
-/* ================= Headings ================= */
 .login-card h2 {
   font-size: 28px;
   margin-bottom: 10px;
@@ -49,7 +45,6 @@ html, body {
   margin-bottom: 25px;
 }
 
-/* ================= Input Fields ================= */
 .login-card input {
   width: 100%;
   padding: 12px 14px;
@@ -72,7 +67,6 @@ html, body {
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
 }
 
-/* ================= Button ================= */
 .login-card button {
   width: 100%;
   padding: 12px;
@@ -91,14 +85,12 @@ html, body {
   box-shadow: 0 4px 12px rgba(0, 91, 187, 0.2);
 }
 
-/* ================= Error ================= */
 .error-msg {
   color: red;
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-/* ================= Link Text ================= */
 .login-card a {
   color: #007bff;
   text-decoration: none;

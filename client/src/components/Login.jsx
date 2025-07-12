@@ -5,7 +5,22 @@ import { Link } from 'react-router-dom';
 
 
 const Login = () => {
-  
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+
+
+  };
+
   return (
     <div className="login-page">
       <form className="login-card" onSubmit={handleSubmit}>

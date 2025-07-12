@@ -4,7 +4,25 @@ import './Login.css';
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
-  
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: ''
+  });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+
+   
+  };
 
   return (
     <div className="login-page">
