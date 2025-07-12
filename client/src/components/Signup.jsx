@@ -31,7 +31,7 @@ const Signup = () => {
       });
 
       if (response.status === 201) {
-        useNavigate('/login')
+        navigate('/login')
       } else {
         setError("Registration failed. Please try again.");
       }
