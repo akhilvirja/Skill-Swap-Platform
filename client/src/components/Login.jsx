@@ -2,13 +2,14 @@ import { useState } from 'react';
 import axios from 'axios';
 import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
-
+import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate()
+  const setIsLoggedIn = useAuth();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -35,6 +36,7 @@ const Login = () => {
         localStorage.setItem('token', token); // store token securely
         // Redirect to dashboard or home
         navigate('/');
+        setIsLoggedIn(true)
       } else {
         setError('Login failed. Please check your credentials.');
       }

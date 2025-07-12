@@ -4,6 +4,7 @@ import axios from 'axios';
 import './Home.css';
 import UserCard from './Usercard';
 import Pagination from './Pagination';
+import { useAuth } from '../context/AuthContext';
 
 const HomePage = () => {
 
@@ -11,7 +12,7 @@ const HomePage = () => {
     const [skill, setSkill] = useState('');
     const [availability, setAvailability] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
-    const [loggedIn, setLoggedIn] = useState(true); // Set this based on real auth
+    const isLoggedIn = useAuth();
 
     useEffect(() => {
     const fetchUsers = async () => {
@@ -68,7 +69,7 @@ const HomePage = () => {
 
             <div className="user-list">
                 {paginatedUsers.map(user => (
-                    <UserCard key={user._id} user={user} loggedIn={loggedIn} />
+                    <UserCard key={user._id} user={user} loggedIn={isLoggedIn} />
                 ))}
             </div>
 
