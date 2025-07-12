@@ -18,3 +18,27 @@ exports.updateProfile = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+exports.addRating = async (req, res) => {
+  try {
+    const { targetUserId, rating, comment } = req.body;
+
+    // Prevent rating yourself
+    if (targetUserId === req.user)
+      return res.status(400).json({ message: "You can't rate yourself" });
+
+    const user = await User.findById(targetUserId);
+    if (!user) return res.status(404).json({ message: 'User not found' });
+
+    user.ratings.push({
+      raterId: req.user,
+      rating,
+      comment
+    });
+
+    await user.save();
+    res.json({ message: 'Rating submitted', ratings: user.ratings });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};

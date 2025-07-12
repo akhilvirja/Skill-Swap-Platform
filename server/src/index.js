@@ -18,6 +18,9 @@ app.use('/api/auth', require('./routes/auth'));
 
 app.use('/api/users', require('./routes/users'));
 
+app.use('/api/swaps', require('./routes/swaps'));
+
+
 // Test route
 app.get('/', (req, res) => {
   res.send('Skill Swap API Running ');
