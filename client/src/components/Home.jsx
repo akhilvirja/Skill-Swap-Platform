@@ -6,6 +6,91 @@ import Pagination from './Pagination';
 
 const HomePage = () => {
 
+
+    const sampleUsers = [
+        {
+            _id: 1,
+            name: 'Marc Demo',
+            profilePhoto: 'https://i.pravatar.cc/150?img=3',
+            skillsOffered: ['Photoshop', 'Excel'],
+            skillsWanted: ['Python', 'UI Design'],
+            availability: 'Weekends',
+        },
+        {
+            _id: 2,
+            name: 'Akhil',
+            profilePhoto: 'https://i.pravatar.cc/150?img=5',
+            skillsOffered: ['React', 'Node.js'],
+            skillsWanted: ['Machine Learning'],
+            availability: 'Evenings',
+        },
+        {
+            _id: 3,
+            name: 'Joe Vills',
+            profilePhoto: 'https://i.pravatar.cc/150?img=8',
+            skillsOffered: ['Java', 'MongoDB'],
+            skillsWanted: ['Graphic Design'],
+            availability: 'Weekends',
+        },
+        {
+            _id: 4,
+            name: 'Anaya Jain',
+            profilePhoto: 'https://i.pravatar.cc/150?img=10',
+            skillsOffered: ['C++', 'Python'],
+            skillsWanted: ['UI/UX'],
+            availability: 'Evenings',
+        },
+        {
+            _id: 5,
+            name: 'Dev Mehra',
+            profilePhoto: 'https://i.pravatar.cc/150?img=12',
+            skillsOffered: ['Photography'],
+            skillsWanted: ['Web Development'],
+            availability: 'Weekends',
+        },
+        {
+            _id: 6,
+            name: 'Nikita Rana',
+            profilePhoto: 'https://i.pravatar.cc/150?img=13',
+            skillsOffered: ['Excel', 'Data Entry'],
+            skillsWanted: ['Python'],
+            availability: 'Evenings',
+        },
+        {
+            _id: 7,
+            name: 'Karan Sethi',
+            profilePhoto: 'https://i.pravatar.cc/150?img=15',
+            skillsOffered: ['JavaScript', 'Express'],
+            skillsWanted: ['React', 'MongoDB'],
+            availability: 'Weekends',
+        },
+        {
+            _id: 8,
+            name: 'Riya Shah',
+            profilePhoto: 'https://i.pravatar.cc/150?img=16',
+            skillsOffered: ['Video Editing'],
+            skillsWanted: ['Excel', 'Photoshop'],
+            availability: 'Evenings',
+        },
+        {
+            _id: 9,
+            name: 'Zayn Ahmed',
+            profilePhoto: 'https://i.pravatar.cc/150?img=18',
+            skillsOffered: ['Linux', 'Docker'],
+            skillsWanted: ['Kubernetes'],
+            availability: 'Weekends',
+        },
+        {
+            _id: 10,
+            name: 'Meena Verma',
+            profilePhoto: 'https://i.pravatar.cc/150?img=20',
+            skillsOffered: ['Digital Marketing'],
+            skillsWanted: ['SEO', 'Content Writing'],
+            availability: 'Evenings',
+        }
+    ];
+
+
     const [users, setUsers] = useState([]);
     const [skill, setSkill] = useState('');
     const [availability, setAvailability] = useState('');
@@ -65,12 +150,12 @@ const HomePage = () => {
             </div>
 
 
-
             <Pagination
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
                 totalPages={totalPages}
             />
+
         </div>
     );
 };
