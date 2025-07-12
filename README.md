@@ -25,3 +25,27 @@ request others in return
 - Monitor pending, accepted, or cancelled swaps.
 - Send platform-wide messages (e.g., feature updates, downtime alerts).
 - Download reports of user activity, feedback logs, and swap stats.
+
+**Team Member 1**:
+
+Name: Patel Vishvam
+
+Email: vishvamp129@gmail.com
+
+**Team Member 2**:
+
+Name: Virja Akhil
+
+Email: virjaakhil@gmai.com
+
+**Team Member 3**:
+
+Name: Ramani Harshit
+
+Email: ramaniharshit97@gmail.com
+
+**Team Member 4**:
+
+Name: Miral Amin
+
+Email: aminmiral0007@gmail.com
