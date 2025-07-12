@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "d22c2ffd-89e5-4ca0-9099-6bfad49e06e0",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38487573",
+		"_collection_link": "https://odoo66-8442.postman.co/workspace/odoo-Workspace~c7bdb559-e734-4c2b-a1b5-ce4822ce5898/collection/38487573-d22c2ffd-89e5-4ca0-9099-6bfad49e06e0?action=share&source=collection_link&creator=38487573"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Vishvam\",\r\n  \"email\": \"vishvam@example.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"vishvam@example.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODcxZjU0ZjM0ZWNmOWQ3ZGMwZDMzMjQiLCJpYXQiOjE3NTIyOTg5NjUsImV4cCI6MTc1MjkwMzc2NX0.Z6hza0AUH8XDZ6RaQ3-4FNDrRb2yLlUasjTUFbATs20",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"location\": \"Ahmedabad\",\r\n  \"skillsOffered\": [\"React\", \"Python\"],\r\n  \"skillsWanted\": [\"UI Design\"],\r\n  \"availability\": [\"Evenings\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/update?Bearer=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODcxZjU0ZjM0ZWNmOWQ3ZGMwZDMzMjQiLCJpYXQiOjE3NTIyOTg5NjUsImV4cCI6MTc1MjkwMzc2NX0.Z6hza0AUH8XDZ6RaQ3-4FNDrRb2yLlUasjTUFbATs20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"update"
+					],
+					"query": [
+						{
+							"key": "Bearer",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODcxZjU0ZjM0ZWNmOWQ3ZGMwZDMzMjQiLCJpYXQiOjE3NTIyOTg5NjUsImV4cCI6MTc1MjkwMzc2NX0.Z6hza0AUH8XDZ6RaQ3-4FNDrRb2yLlUasjTUFbATs20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "me",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Accept",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "api/swaps/{id}/accept",
+					"host": [
+						"api"
+					],
+					"path": [
+						"swaps",
+						"{id}",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "rating",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

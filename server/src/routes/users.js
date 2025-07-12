@@ -10,26 +10,8 @@ router.post('/rate', authMiddleware, addRating);
 
 router.get('/public', async (req, res) => {
   try {
-    const { skill, location, availability } = req.query;
-
-    const query = {
-      isPublic: true
-    };
-
-    if (skill) {
-      query.skillsOffered = { $regex: skill, $options: 'i' };
-    }
-
-    if (location) {
-      query.location = { $regex: location, $options: 'i' };
-    }
-
-    if (availability) {
-      query.availability = availability;
-    }
-
-    const users = await User.find(query).select('-password -ratings');
-    res.json(users);
+    const users = await User.find().select('-password -ratings');
+    res.status(200).json(users);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
