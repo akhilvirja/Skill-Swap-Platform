@@ -18,34 +18,9 @@ request others in return
 - Ratings or feedback after a swap
 - The user is also able to delete the swap request if it is not accepted
 
-**Admin Role**
-
-- Reject inappropriate or spammy skill descriptions.
-- Ban users who violate platform policies.
-- Monitor pending, accepted, or cancelled swaps.
-- Send platform-wide messages (e.g., feature updates, downtime alerts).
-- Download reports of user activity, feedback logs, and swap stats.
-
-**Team Member 1**:
-
-Name: Patel Vishvam
-
-Email: vishvamp129@gmail.com
-
-**Team Member 2**:
-
-Name: Virja Akhil
-
-Email: virjaakhil@gmail.com
-
-**Team Member 3**:
-
-Name: Ramani Harshit
-
-Email: ramaniharshit97@gmail.com
-
-**Team Member 4**:
-
-Name: Miral Amin
-
-Email: aminmiral0007@gmail.com
+Admin Role
+● Reject inappropriate or spammy skill descriptions.
+● Ban users who violate platform policies.
+● Monitor pending, accepted, or cancelled swaps.
+● Send platform-wide messages (e.g., feature updates, downtime alerts).
+● Download reports of user activity, feedback logs, and swap stats.
