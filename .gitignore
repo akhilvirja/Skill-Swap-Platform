@@ -1,0 +1,23 @@
+# Ignore node modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Ignore environment files
+.env
+client/.env
+server/.env
+
+# Ignore build output
+dist/
+client/dist/
+server/dist/
+
+# Ignore editor/OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
+logs/
